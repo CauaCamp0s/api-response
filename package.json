@@ -1,0 +1,9 @@
+{
+  "name": "@caua/api-response",
+  "version": "1.0.0",
+  "description": "Padronização de respostas de API REST",
+  "main": "src/index.js",
+  "keywords": ["api", "response", "rest", "node"],
+  "author": "Cauacamp0s",
+  "license": "MIT"
+}
