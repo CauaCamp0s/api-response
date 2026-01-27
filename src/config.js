@@ -3,7 +3,8 @@ const defaults = require('./defaults');
 const config = {
   messages: Object.assign({}, defaults.messages),
   exposeStack: !!defaults.exposeStack,
-  validateStatus: !!defaults.validateStatus
+  validateStatus: !!defaults.validateStatus,
+  format: null
 };
 
 function configure(opts) {
@@ -19,6 +20,7 @@ function configure(opts) {
 
   if (typeof opts.exposeStack === 'boolean') config.exposeStack = opts.exposeStack;
   if (typeof opts.validateStatus === 'boolean') config.validateStatus = opts.validateStatus;
+  if (typeof opts.format === 'function') config.format = opts.format;
 
   return config;
 }
