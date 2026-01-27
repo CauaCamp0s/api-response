@@ -1,9 +1,19 @@
 {
-  "name": "@caua/api-response",
+  "name": "@cauacampos/api-response",
   "version": "1.0.0",
   "description": "Padronização de respostas de API REST",
   "main": "src/index.js",
-  "keywords": ["api", "response", "rest", "node"],
+  "keywords": [
+    "api",
+    "response",
+    "rest",
+    "node"
+  ],
   "author": "Cauacamp0s",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CauaCamp0s/api-response.git"
+  },
+  "private": false,
   "license": "MIT"
 }

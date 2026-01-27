@@ -26,7 +26,6 @@ function serializeError(err, exposeStack) {
     }
   }
 
-  // primitive (string/number/bool)
   return err;
 }
 
