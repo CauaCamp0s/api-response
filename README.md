@@ -1,4 +1,4 @@
-# @caua/api-response
+# npm i @cauacampos/api-response
 
 [![npm version](https://badge.fury.io/js/%40caua%2Fapi-response.svg)](https://badge.fury.io/js/%40caua%2Fapi-response)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
