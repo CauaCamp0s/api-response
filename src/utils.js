@@ -9,24 +9,31 @@ function normalizeData(d) {
 function serializeError(err, exposeStack) {
   if (err == null) return null;
 
-  if (Array.isArray(err)) return err.map(e => serializeError(e, exposeStack));
-
-  if (err instanceof Error) {
-    const out = { name: err.name, message: err.message };
-    if (exposeStack && err.stack) out.stack = err.stack;
-    return out;
+  if (Array.isArray(err)) {
+    return err.map(e => serializeError(e, exposeStack));
   }
 
-  if (typeof err === 'object') {
+  // Caso único Error → retorna array com 1 item
+  if (err instanceof Error) {
+    const out = { name: err.name, message: err.message };
+    if (exposeStack && err.stack) {
+      out.stack = err.stack;
+    }
+    return [out];
+  }
+
+  // Objeto genérico válido
+  if (typeof err === 'object' && err !== null) {
     try {
-      JSON.stringify(err);
-      return err;
+      JSON.stringify(err); // testa se é serializável
+      return [err];
     } catch (e) {
-      return { message: 'Erro não serializável' };
+      return [{ message: 'Erro não serializável' }];
     }
   }
 
-  return err;
+  // Qualquer outro valor (string, number, etc) → embrulha em array
+  return [{ message: String(err) }];
 }
 
 module.exports = { isValidStatus, normalizeData, serializeError };

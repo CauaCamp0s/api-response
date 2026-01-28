@@ -146,7 +146,9 @@ function wrap(handler) {
         const sc = result.statusCode || constants.OK;
         return res.status(sc).json(result);
       }
-      return result;
+      if (result !== undefined) {
+        return result;
+      }
     } catch (err) {
       const response = fromError(err);
       const sc = response.statusCode || constants.INTERNAL_SERVER_ERROR;
