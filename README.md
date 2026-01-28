@@ -6,13 +6,13 @@
 > Biblioteca leve e padronizada para respostas HTTP JSON em APIs Node.js (Express/Fastify e outros).
 > Garante consistência, fácil manutenção e estrutura limpa para suas APIs.
 
-## 📋 Instalação
+## Instalação
 
 ```bash
 npm install @cauacampos/api-response
 ```
 
-## 🚀 Começar
+## Começar
 
 ### Uso Básico (Express)
 
@@ -57,7 +57,7 @@ app.get('/users/:id', wrap(async (req, res) => {
 }));
 ```
 
-## 📚 Referência da API
+## Referência da API
 
 ### Funções de Resposta
 
@@ -88,7 +88,7 @@ Envolve um handler (controller) assíncrono. Se o handler retornar um objeto de 
 #### `fromError(err)`
 Converte um objeto `Error` ou erro qualquer em uma estrutura de resposta padronizada. Útil em middlewares de erro globais.
 
-## 💡 Exemplos de Estrutura JSON
+## Exemplos de Estrutura JSON
 
 **Sucesso com Paginação (`paginate`):**
 ```json
@@ -119,7 +119,7 @@ Converte um objeto `Error` ou erro qualquer em uma estrutura de resposta padroni
 }
 ```
 
-## ⚙️ Configuração Global
+## Configuração Global
 
 Você pode alterar as mensagens padrão e comportamentos globais no início da sua aplicação.
 
@@ -136,7 +136,7 @@ response.configure({
 });
 ```
 
-## 🔧 Constantes HTTP Exportadas
+## Constantes HTTP Exportadas
 
 Para evitar "magic numbers", o pacote exporta constantes para os códigos HTTP:
 
@@ -149,6 +149,6 @@ const {
 } = require('@cauacampos/api-response');
 ```
 
-## 📄 Licença
+## Licença
 
 MIT
