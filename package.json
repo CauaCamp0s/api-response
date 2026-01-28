@@ -1,6 +1,6 @@
 {
   "name": "@cauacampos/api-response",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Padronização de respostas de API REST",
   "main": "src/index.js",
   "keywords": [
